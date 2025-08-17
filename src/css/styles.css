@@ -4,4 +4,155 @@
   box-sizing: border-box;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #fefefe;
+}
+.container header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  border-bottom: 4px solid black;
+}
+.container header .header__container {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.container header .header__container .header__welcome {
+  margin-left: 20px;
+}
+.container header .header__container .header__welcome .header__title {
+  font-size: 28px;
+}
+.container header .header__container .header__navContainer {
+  list-style-type: none;
+  display: flex;
+  margin-right: 40px;
+}
+.container header .header__container .header__navContainer .header__list {
+  display: flex;
+  gap: 0 25px;
+  list-style-type: none;
+}
+.container header .header__container .header__navContainer .header__list .header__item {
+  font-size: 22px;
+  transition: all 0.1s linear;
+}
+.container header .header__container .header__navContainer .header__list .header__item:hover {
+  text-decoration: underline;
+}
+.container header .header__container .header__navContainer .header__list .header__item .header__link {
+  text-decoration: none;
+  color: black;
+}
+.container main .main__container {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+}
+.container main .main__container .main__fightButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container main .main__container .main__fightButton .fightButton {
+  width: 250px;
+  height: 80px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+}
+.container main .main__container .main__fightButton .fightButton:hover {
+  background: black;
+  color: white;
+  font-size: 24px;
+  border-radius: 5px;
+}
+.container main .main__container .main__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px 0;
+  width: 100%;
+}
+.container main .main__container .main__form .form__title {
+  font-size: 28px;
+}
+.container main .main__container .main__form .form__input {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-bottom: 20px;
+}
+.container main .main__container .main__form .form__input .form__inputlabel {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.container main .main__container .main__form .form__input .form__userName {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 22px;
+}
+.container main .main__container .main__form .form__createButton {
+  width: 25%;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.container main .main__container .main__form .form__createButton:hover {
+  background-color: black;
+  color: white;
+}
+.container footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid black;
+}
+.container footer .footer__container {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0 35px;
+}
+.container footer .footer__container .footer__dev {
+  font-size: 22px;
+}
+.container footer .footer__container .footer__dev a {
+  text-decoration: none;
+  color: black;
+}
+.container footer .footer__container .footer__dev a:hover {
+  text-decoration: underline;
+  color: rgb(59, 1, 1);
+}
+.container footer .footer__container .footer__devDate {
+  font-size: 22px;
+  margin-right: 40px;
+}
+
 /*# sourceMappingURL=styles.css.map */

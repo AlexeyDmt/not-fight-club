@@ -4,3 +4,197 @@
     box-sizing: border-box;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #fefefe;
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        margin-top: 20px;
+        border-bottom: 4px solid black;
+
+        .header__container {
+            width: 100%;
+            max-width: 1920px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+
+            .header__welcome {
+                margin-left: 20px;
+
+                .header__title {
+                    font-size: 28px;
+                }
+            }
+
+            .header__navContainer {
+                list-style-type: none;
+                display: flex;
+                margin-right: 40px;
+
+                .header__list {
+                    display: flex;
+                    gap: 0 25px;
+                    list-style-type: none;
+
+                    .header__item {
+                        font-size: 22px;
+                        transition: all 0.1s linear;
+                        
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                        .header__link {
+
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .main__container {
+            width: 100%;
+            max-width: 1920px;
+            height: 100%;
+            margin: 0 auto;
+
+            // start styles for index.html page
+
+            .main__fightButton {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .fightButton {
+                    width: 250px;
+                    height: 80px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    border-radius: 5px;
+                    transition: all 0.2s linear;
+
+                    &:hover {
+                        background: black;
+                        color: white;
+                        font-size: 24px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            // end styles for index.html page
+
+
+            // start styles for register.html page
+
+            .main__form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 25px 0;
+                width: 100%;
+
+                .form__title {
+                    font-size: 28px;
+                }
+
+                .form__input {
+                    display: flex;
+                    flex-direction: column;
+                    width: 35%;
+                    margin-bottom: 20px;
+
+                    .form__inputlabel {
+                        font-size: 22px;
+                        margin-bottom: 10px;
+                    }
+
+                    .form__userName {
+                        width: 100%;
+                        height: 40px;
+                        padding-left: 10px;
+                        font-size: 22px;
+                    }
+                }
+
+                .form__createButton {
+                    width: 25%;
+                    height: 60px;
+                    border-radius: 10px;
+                    font-size: 22px;
+                    cursor: pointer;
+                    transition: all 0.2s linear;
+
+
+                    &:hover {
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+
+            // end styles for register.html page
+        }
+    }
+
+    footer {
+
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 4px solid black;
+
+        .footer__container {
+            width: 100%;
+            max-width: 1920px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 0 35px;
+
+
+            .footer__dev {
+                font-size: 22px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                                    &:hover {
+                    text-decoration: underline;
+                    color: rgb(59, 1, 1);
+                }
+                }
+
+
+            }
+
+            .footer__devDate {
+                font-size: 22px;
+                margin-right: 40px;
+            }
+        }
+    }
+}
