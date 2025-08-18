@@ -21,14 +21,14 @@
         </header>
         <main>
             <div class="main__container">
-                <div class="main__form">
+                <form class="main__userRegisterForm">
                     <h2 class="form__title">Create Your Character</h2>
                     <div class="form__input">
-                        <label for="user-name" class="form__inputlabel">Character Name:</label>
+                        <label for="user-name" class="form__inputLabel">Character Name:</label>
                         <input id="user-name" type="text" class="form__userName">
                     </div>
-                    <button class="form__createButton">Create Character</button>
-                </div>
+                    <button type="submit" id="form__createButton" class="form__createButton">Create Character</button>
+                </form>
             </div>
         </main>
         <footer>
@@ -38,7 +38,8 @@
             </div>
         </footer>
     </div>
-    <script src="/src/scripts/main.js"></script>
+    <script src="/src/scripts/common/local-storage.js"></script>
+    <script src="/src/scripts/pages/register-page.js"></script>
 </body>
 
 </html>
