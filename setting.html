@@ -16,6 +16,7 @@
             <div class="header__container">
                 <div class="header__welcome">
                     <h1 class="header__title">Welcome to the Not-Fight-Club!</h1>
+                    <p class="header__profile">Character</p>
                 </div>
                 <nav class="header__navContainer">
                     <ul class="header__list">
@@ -28,9 +29,11 @@
         </header>
         <main>
             <div class="main__container">
-                <div class="main__fightButton">
-                    <button class="fightButton">Fight!!!</button>
-                    <!-- <a href="/register.html">register page</a> -->
+                <div class="setting__container">
+                    <div class="setting__title">
+                        You call yourself: <span class="setting__userName">Default</span>, it's boring! Choose another!
+                    </div>
+                    <button class="setting__changeName" type="submit">Change</button>
                 </div>
             </div>
         </main>
@@ -43,7 +46,7 @@
         </footer>
     </div>
     <script src="/src/scripts/common/local-storage.js"></script>
-    <script src="/src/scripts/pages/main-page.js"></script>
+    <script src="/src/scripts/pages/setting.js"></script>
 </body>
 
 </html>

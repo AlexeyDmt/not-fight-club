@@ -36,6 +36,11 @@
                 .header__title {
                     font-size: 28px;
                 }
+
+                .header__profile {
+                    padding-top: 10px;
+                    font-size: 22px;
+                }
             }
 
             .header__navContainer {
@@ -51,11 +56,11 @@
                     .header__item {
                         font-size: 22px;
                         transition: all 0.1s linear;
-                        
 
-                    &:hover {
-                        text-decoration: underline;
-                    }
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
 
                         .header__link {
 
@@ -154,6 +159,111 @@
             }
 
             // end styles for register.html page
+
+            // start styles for profile.html
+
+            .profile__container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0 50px;
+
+                .profile__description {
+                    font-size: 24px;
+                    padding-bottom: 20px;
+                }
+
+                .profile__userPicture {
+                    width: 100%;
+                    max-width: 323px;
+                    height: 100%;
+                    max-height: 600px;
+                    object-fit: contain;
+                    cursor: pointer;
+                }
+
+                .profile__info {
+                    .profile__title {
+                        font-size: 28px;
+                        font-style: italic;
+                        font-weight: 700;
+                        margin-bottom: 30px;
+                    }
+
+                    .profile__userName {
+                        font-size: 22px;
+                        font-weight: 500;
+                        margin-bottom: 15px;
+                    }
+
+                    .profile__statistic {
+                        display: flex;
+                        gap: 0 15px;
+                        font-size: 18px;
+
+                        .profile__userWin {
+                            color: green;
+                        }
+
+                        .profile__userLoses {
+                            color: red;
+                        }
+                    }
+                }
+
+                .profile__popup {
+                    div {
+                        img {
+                            width: 100%;
+                            max-width: 160px;
+                            height: 100%;
+                            max-height: 300px;
+                            object-fit: contain;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            // end styles for profile.html
+
+            // start styles for setting.html
+
+            .setting__container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px 0px;
+
+                .setting__title {
+                    font-size: 26px;
+
+                    .setting__userName {
+                        color: red;
+                    }
+                }
+
+                .setting__changeName {
+                    width: 250px;
+                    height: 80px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    border-radius: 5px;
+                    transition: all 0.2s linear;
+
+                    &:hover {
+                        background: black;
+                        color: white;
+                        font-size: 24px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            // end styles for setting.html
         }
     }
 
@@ -182,10 +292,10 @@
                     text-decoration: none;
                     color: black;
 
-                                    &:hover {
-                    text-decoration: underline;
-                    color: rgb(59, 1, 1);
-                }
+                    &:hover {
+                        text-decoration: underline;
+                        color: rgb(59, 1, 1);
+                    }
                 }
 
 
