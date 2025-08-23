@@ -16,6 +16,7 @@
             <div class="header__container">
                 <div class="header__welcome">
                     <h1 class="header__title">Welcome to the Not-Fight-Club!</h1>
+                    <p class="header__profile">Let's fight!</p>
                 </div>
                 <nav class="header__navContainer">
                     <ul class="header__list">
@@ -28,11 +29,27 @@
         </header>
         <main>
             <div class="main__container">
-                <div class="main__fightButton">
-                    <button class="fightButton"><a href="battle.html">FIGHT!</a></button>
-                    <!-- <a href="/register.html">register page</a> -->
+                <div class="battle__container">
+                    <div class="battle__mainWindow">
+                        <div class="battle__playerPage">
+                            <div class="battle__playerPage_name">Plaeyr</div>
+                            <div class="battle__playerPage_avatar"><img src="#" alt="user-avatar"></div>
+                            <div class="battle__playerPage_health"></div>
+                        </div>
+
+                        <div class="battle__battlePage"></div>
+
+                        <div class="battle__enemyPage">
+                            <div class="battle__enemyPage_name">Enemy</div>
+                            <div class="battle__enemyPage_avatar"><img src="#" alt="enemy-avatar"></div>
+                            <div class="battle__enemyPage_health"></div>
+                        </div>
+                    </div>
+
+                    <div class="battle__asideWindow">
+
+                    </div>
                 </div>
-            </div>
         </main>
         <footer>
             <div class="footer__container">
@@ -43,7 +60,7 @@
         </footer>
     </div>
     <script src="/src/scripts/common/local-storage.js"></script>
-    <script src="/src/scripts/pages/main-page.js"></script>
+    <script src="/src/scripts/pages/battle.js"></script>
 </body>
 
 </html>

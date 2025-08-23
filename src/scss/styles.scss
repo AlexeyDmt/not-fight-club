@@ -74,7 +74,13 @@
     }
 
     main {
+
+        height: calc(100% - 180px);
+
         .main__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             max-width: 1920px;
             height: 100%;
@@ -90,19 +96,34 @@
                 .fightButton {
                     width: 250px;
                     height: 80px;
-                    cursor: pointer;
-                    font-size: 20px;
-                    font-weight: 700;
-                    text-transform: uppercase;
                     border-radius: 5px;
+                    cursor: pointer;
                     transition: all 0.2s linear;
 
-                    &:hover {
-                        background: black;
-                        color: white;
-                        font-size: 24px;
-                        border-radius: 5px;
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: rgb(112, 111, 111);
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: all 0.2s linear;
+
+
+                        &:hover {
+                            color: white;
+                            font-size: 24px;
+                        }
                     }
+                }
+
+                .fightButton:hover {
+                    background: black;
                 }
             }
 
@@ -303,6 +324,76 @@
             }
 
             // end styles for setting.html
+
+
+
+            // start styles for battle.html
+
+            .battle__container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 1920px;
+                height: calc(100% - 180px);
+                margin: 30px 30px;
+
+                .battle__mainWindow {
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    border-bottom: 2px solid black;
+
+                    .battle__playerPage {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+
+
+                        .battle__playerPage_name {
+                            font-size: 24px;
+                            margin-bottom: 20px;
+                        }
+
+                        .battle__playerPage_avatar img {
+                            border-radius: 10px;
+                        }
+
+                        .battle__playerPage_health {}
+                    }
+
+                    .battle__enemyPage {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+
+
+                        .battle__enemyPage_name {
+                            font-size: 24px;
+                            margin-bottom: 20px;
+                        }
+
+                        .battle__enemyPage_avatar img {
+                            border-radius: 10px;
+                        }
+
+                        .battle__enemyPage_health {}
+                    }
+                }
+
+                .battle__asideWindow {
+                    display: flex;
+                    height: 20%;
+                    width: 100%;
+                }
+            }
+
+            // end styles for battle.html
         }
     }
 

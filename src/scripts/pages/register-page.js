@@ -20,6 +20,7 @@ saveUserName.addEventListener('submit', (e) => {
         'avatar': '/src/assets/avatars/default.jpg',
         'win': '0',
         'loses': 'O',
+        'health': 150,
         'logs': [],
     }
 
