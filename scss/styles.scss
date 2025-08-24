@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #fefefe;
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        margin-top: 20px;
+        border-bottom: 4px solid black;
+
+        .header__container {
+            width: 100%;
+            max-width: 1920px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+
+            .header__welcome {
+                margin-left: 20px;
+
+                .header__title {
+                    font-size: 28px;
+                }
+
+                .header__profile {
+                    padding-top: 10px;
+                    font-size: 22px;
+                }
+            }
+
+            .header__navContainer {
+                list-style-type: none;
+                display: flex;
+                margin-right: 40px;
+
+                .header__list {
+                    display: flex;
+                    gap: 0 25px;
+                    list-style-type: none;
+
+                    .header__item {
+                        font-size: 22px;
+                        transition: all 0.1s linear;
+
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        .header__link {
+
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+
+        height: calc(100% - 180px);
+
+        .main__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1920px;
+            height: 100%;
+            margin: 0 auto;
+
+            // start styles for index.html page
+
+            .main__fightButton {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .fightButton {
+                    width: 250px;
+                    height: 80px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all 0.2s linear;
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: rgb(112, 111, 111);
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: all 0.2s linear;
+
+
+                        &:hover {
+                            color: white;
+                            font-size: 24px;
+                        }
+                    }
+                }
+
+                .fightButton:hover {
+                    background: black;
+                }
+            }
+
+            // end styles for index.html page
+
+
+            // start styles for register.html page
+
+            .main__userRegisterForm {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 25px 0;
+                width: 100%;
+
+                .form__title {
+                    font-size: 28px;
+                }
+
+                .form__input {
+                    display: flex;
+                    flex-direction: column;
+                    width: 35%;
+                    margin-bottom: 20px;
+
+                    .form__inputLabel {
+                        font-size: 22px;
+                        margin-bottom: 10px;
+                    }
+
+                    .form__userName {
+                        width: 100%;
+                        height: 40px;
+                        padding-left: 10px;
+                        font-size: 22px;
+                    }
+                }
+
+                .form__createButton {
+                    width: 25%;
+                    height: 60px;
+                    border-radius: 10px;
+                    font-size: 22px;
+                    cursor: pointer;
+                    transition: all 0.2s linear;
+
+
+                    &:hover {
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+
+            // end styles for register.html page
+
+            // start styles for profile.html
+
+            .profile__container {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0 50px;
+
+                .profile__description {}
+
+                .profile__userPicture {
+                    width: 100%;
+                    max-width: 323px;
+                    height: 100%;
+                    max-height: 600px;
+                    object-fit: contain;
+                    cursor: pointer;
+                    opacity: 1;
+                    transition: opacity 0.5s linear;
+                }
+
+                .profile__info {
+                    .profile__title {
+                        font-size: 28px;
+                        font-style: italic;
+                        font-weight: 700;
+                        margin-bottom: 30px;
+                        opacity: 1;
+                        transition: opacity 0.5s linear;
+                    }
+
+                    .profile__userName {
+                        font-size: 22px;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                        text-align: center;
+                    }
+
+                    .profile__statistic {
+                        display: flex;
+                        gap: 0 15px;
+                        font-size: 18px;
+
+                        .profile__userWin {
+                            color: green;
+                        }
+
+                        .profile__userLoses {
+                            color: red;
+                        }
+                    }
+                }
+
+                .profile__popup {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: opacity 0.5s linear;
+                    pointer-events: none;
+
+
+                    .profile__description {
+                        font-size: 24px;
+                        padding-bottom: 20px;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 5px 5px;
+
+                        img {
+                            width: 100%;
+                            max-width: 200px;
+                            height: 100%;
+                            max-height: 300px;
+                            object-fit: contain;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            // end styles for profile.html
+
+            // start styles for setting.html
+
+            .setting__container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px 0px;
+
+                .setting__title {
+                    font-size: 26px;
+
+                    .setting__userName {
+                        color: red;
+                    }
+                }
+
+                .setting__formChangeUserName {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .settingNewUserName {
+                        display: block;
+                        width: 100%;
+                        height: 40px;
+                        padding-left: 10px;
+                        font-size: 22px;
+                        margin-bottom: 25px;
+                        text-align: center;
+                    }
+
+                    .setting__changeName {
+                        width: 250px;
+                        height: 80px;
+                        cursor: pointer;
+                        font-size: 20px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        border-radius: 5px;
+                        transition: all 0.2s linear;
+
+                        &:hover {
+                            background: black;
+                            color: white;
+                            font-size: 24px;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+
+            // end styles for setting.html
+
+
+
+            // start styles for battle.html
+
+            .battle__container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 1920px;
+                height: calc(100% - 180px);
+                margin: 30px 30px;
+
+                .battle__mainWindow {
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    border-bottom: 2px solid black;
+
+                    .battle__playerPage {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+
+
+                        .battle__playerPage_name {
+                            font-size: 24px;
+                            margin-bottom: 20px;
+                        }
+
+                        .battle__playerPage_avatar img {
+                            border-radius: 10px;
+                        }
+
+                        .battle__playerPage_health {}
+                    }
+
+                    .battle__enemyPage {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+
+
+                        .battle__enemyPage_name {
+                            font-size: 24px;
+                            margin-bottom: 20px;
+                        }
+
+                        .battle__enemyPage_avatar img {
+                            border-radius: 10px;
+                        }
+
+                        .battle__enemyPage_health {}
+                    }
+                }
+
+                .battle__asideWindow {
+                    display: flex;
+                    height: 20%;
+                    width: 100%;
+                }
+            }
+
+            // end styles for battle.html
+        }
+    }
+
+    footer {
+
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 4px solid black;
+
+        .footer__container {
+            width: 100%;
+            max-width: 1920px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 0 35px;
+
+
+            .footer__dev {
+                font-size: 22px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: rgb(59, 1, 1);
+                    }
+                }
+
+
+            }
+
+            .footer__devDate {
+                font-size: 22px;
+                margin-right: 40px;
+            }
+        }
+    }
+}
