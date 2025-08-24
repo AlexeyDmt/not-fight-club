@@ -16,7 +16,7 @@ profilePicture.src = currentUser.avatar;
 const enemy = {
     zombi: {
         name: 'Zombi',
-        avatar: '/src/assets/avatars/enemy_1.jpg',
+        avatar: './src/assets/avatars/enemy_1.jpg',
         attack: 1,
         defense: 1,
         health: 100,
@@ -24,7 +24,7 @@ const enemy = {
 
         lord: {
         name: 'Lord',
-        avatar: '/src/assets/avatars/enemy_2.jpg',
+        avatar: './src/assets/avatars/enemy_2.jpg',
         attack: 1,
         defense: 2,
         health: 150,
@@ -32,7 +32,7 @@ const enemy = {
 
     greatValuar: {
         name: 'Great Valuar',
-        avatar: '/src/assets/avatars/enemy_3.jpg',
+        avatar: './src/assets/avatars/enemy_3.jpg',
         attack: 2,
         defense: 2,
         health: 200,

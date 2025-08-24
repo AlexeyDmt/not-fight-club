@@ -17,7 +17,7 @@ saveUserName.addEventListener('submit', (e) => {
 
     const userSetting = {
         'user': userName,
-        'avatar': '/src/assets/avatars/default.jpg',
+        'avatar': './src/assets/avatars/default.jpg',
         'win': '0',
         'loses': 'O',
         'health': 150,

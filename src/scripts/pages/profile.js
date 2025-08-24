@@ -41,36 +41,36 @@ popupActive.addEventListener('click', (e) => {
     if (clickedImg.tagName == 'IMG') {
         switch (clickedImg.dataset.avatar) {
             case '1':
-                userAvatar.src = '/src/assets/avatars/default.jpg';
-                currentUser.avatar = '/src/assets/avatars/default.jpg';
+                userAvatar.src = './src/assets/avatars/default.jpg';
+                currentUser.avatar = './src/assets/avatars/default.jpg';
                 break;
             case '2':
-                userAvatar.src = '/src/assets/avatars/ghost.jpg';
-                currentUser.avatar = '/src/assets/avatars/ghost.jpg';
+                userAvatar.src = './src/assets/avatars/ghost.jpg';
+                currentUser.avatar = './src/assets/avatars/ghost.jpg';
                 break;
             case '3':
-                userAvatar.src = '/src/assets/avatars/man_1.jpg';
-                currentUser.avatar = '/src/assets/avatars/man_1.jpg';
+                userAvatar.src = './src/assets/avatars/man_1.jpg';
+                currentUser.avatar = './src/assets/avatars/man_1.jpg';
                 break;
             case '4':
-                userAvatar.src = '/src/assets/avatars/man_2.jpg';
-                currentUser.avatar = '/src/assets/avatars/man_2.jpg';
+                userAvatar.src = './src/assets/avatars/man_2.jpg';
+                currentUser.avatar = './src/assets/avatars/man_2.jpg';
                 break;
             case '5':
-                userAvatar.src = '/src/assets/avatars/man_3.jpg';
-                currentUser.avatar = '/src/assets/avatars/man_3.jpg';
+                userAvatar.src = './src/assets/avatars/man_3.jpg';
+                currentUser.avatar = './src/assets/avatars/man_3.jpg';
                 break;
             case '6':
-                userAvatar.src = '/src/assets/avatars/women_1.jpg';
-                currentUser.avatar = '/src/assets/avatars/women_1.jpg';
+                userAvatar.src = './src/assets/avatars/women_1.jpg';
+                currentUser.avatar = './src/assets/avatars/women_1.jpg';
                 break;
             case '7':
-                userAvatar.src = '/src/assets/avatars/women_3.jpg';
-                currentUser.avatar = '/src/assets/avatars/women_3.jpg';
+                userAvatar.src = './src/assets/avatars/women_3.jpg';
+                currentUser.avatar = './src/assets/avatars/women_3.jpg';
                 break;
             case '8':
-                userAvatar.src = '/src/assets/avatars/women_2.jpg';
-                currentUser.avatar = '/src/assets/avatars/women_2.jpg';
+                userAvatar.src = './src/assets/avatars/women_2.jpg';
+                currentUser.avatar = './src/assets/avatars/women_2.jpg';
                 break;
 
             default:
