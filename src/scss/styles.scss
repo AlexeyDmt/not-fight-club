@@ -254,6 +254,7 @@
                         display: flex;
                         flex-wrap: wrap;
                         gap: 5px 5px;
+                        width: 1024px;
 
                         img {
                             width: 100%;
@@ -437,4 +438,179 @@
             }
         }
     }
+}
+
+@media (max-width: 1024px) {
+
+  .container {
+    
+    header {
+      height: 80px;
+      margin-top: 10px;
+
+      .header__container {
+        flex-direction: column;
+        gap: 10px;
+
+        .header__welcome {
+          margin-left: 0;
+
+          .header__title {
+            font-size: 22px;
+          }
+
+          .header__profile {
+            font-size: 18px;
+          }
+        }
+
+        .header__navContainer {
+          margin-right: 0;
+
+          .header__list {
+            flex-direction: column;
+            gap: 10px 0;
+
+            .header__item {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      .main__container {
+
+        .main__fightButton {
+          .fightButton {
+            width: 200px;
+            height: 60px;
+
+            a {
+              font-size: 18px;
+
+              &:hover {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+
+        .main__userRegisterForm {
+          .form__title {
+            font-size: 24px;
+          }
+
+          .form__input {
+            width: 60%;
+
+            .form__inputLabel {
+              font-size: 18px;
+            }
+
+            .form__userName {
+              font-size: 18px;
+            }
+          }
+
+          .form__createButton {
+            width: 40%;
+            height: 50px;
+            font-size: 18px;
+          }
+        }
+
+        .profile__container {
+          flex-direction: column;
+          gap: 20px;
+
+          .profile__userPicture {
+            max-width: 250px;
+            max-height: 400px;
+          }
+
+          .profile__info {
+            .profile__title {
+              font-size: 24px;
+            }
+
+            .profile__userName {
+              font-size: 18px;
+            }
+
+            .profile__statistic {
+              font-size: 16px;
+              gap: 0 10px;
+            }
+          }
+
+          .profile__popup {
+            .profile__popup_avatars {
+              width: 100%;
+              gap: 5px 5px;
+
+              img {
+                max-width: 150px;
+                max-height: 250px;
+              }
+            }
+          }
+        }
+
+        .setting__container {
+          .setting__title {
+            font-size: 22px;
+          }
+
+          .settingNewUserName {
+            font-size: 18px;
+          }
+
+          .setting__changeName {
+            width: 200px;
+            height: 60px;
+            font-size: 18px;
+          }
+        }
+
+        .battle__container {
+          margin: 20px 10px;
+
+          .battle__mainWindow {
+            flex-direction: column;
+            height: auto;
+            gap: 20px;
+
+            .battle__playerPage,
+            .battle__enemyPage {
+              .battle__playerPage_name,
+              .battle__enemyPage_name {
+                font-size: 20px;
+              }
+            }
+          }
+
+          .battle__asideWindow {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    footer {
+      height: 60px;
+
+      .footer__container {
+        flex-direction: column;
+        gap: 10px 0;
+
+        .footer__dev,
+        .footer__devDate {
+          font-size: 18px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
