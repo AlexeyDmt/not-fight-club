@@ -1,0 +1,31 @@
+{
+  "name": "not-fight-club",
+  "version": "1.0.0",
+  "description": "not-fight-club",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "dev": "concurrently \"npm run watch-css\" \"npm run start\"",
+    "watch-css": "sass --watch src/scss:src/css",
+    "build": "sass src/scss:src/css --style=compressed",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexeyDmt/not-fight-club.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexeyDmt/not-fight-club/issues"
+  },
+  "homepage": "https://github.com/AlexeyDmt/not-fight-club",
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "gh-pages": "^6.3.0",
+    "lite-server": "^2.6.1",
+    "sass": "^1.90.0"
+  }
+}
