@@ -29,10 +29,10 @@ const enemy = {
     greatValuar: {
         name: 'Great Valuar',
         avatar: './src/assets/avatars/enemy_3.jpg',
-        attack: 2,
+        attack: 1,
         defense: 2,
         health: 200,
-        damage: 15
+        damage: 20
     }
 };
 
@@ -120,12 +120,23 @@ fightButtonStart.addEventListener('click', () => {
     let userDamage = 0;
     let enemyDamage = 0;
 
-    const critChance = 0.2; // шанс критического удара
+    const ignoreBlockChance = 0.3; // шанс пробить блок
+    const critChance = 0.2;        // шанс критического удара
+    const critMultiplier = 2;      // модификатор урона
 
     // Логика атаки игрока
     const userAttackZone = attackArea[0].value;
-    if (!enemyCurrentDefense.includes(userAttackZone) || Math.random() < critChance) {
+    let isUserCrit = false;
+
+    if (!enemyCurrentDefense.includes(userAttackZone) || Math.random() < ignoreBlockChance) {
         userDamage = currentUser.damage;
+
+        // Проверяем крит
+        if (Math.random() < critChance) {
+            isUserCrit = true;
+            userDamage *= critMultiplier;
+        }
+
         battleState.enemyHealth -= userDamage;
         if (battleState.enemyHealth < 0) battleState.enemyHealth = 0;
 
@@ -135,15 +146,21 @@ fightButtonStart.addEventListener('click', () => {
         pageForLogs.insertAdjacentHTML(
             'afterbegin',
             `<div class="logBattle">
-            <span class="logBattle__name">${currentUser.user}</span> hits <span class="logBattle__name">${savedEnemy.name}</span> in <span class="logBattle__zone">${userAttackZone}</span>, dealing <span class="logBattleDamage">${userDamage}</span> damage! 
-            <span class="logBattle__name">${savedEnemy.name}</span>'s health: <span class="logBattle__currentHealth"> ${enemyLifeText.textContent}</span>
+            <span class="logBattle__name">${currentUser.user}</span> ${isUserCrit ? '<b>CRIT!</b> ' : ''}hits 
+            <span class="logBattle__name">${savedEnemy.name}</span> in 
+            <span class="logBattle__zone">${userAttackZone}</span>, dealing 
+            <span class="logBattleDamage">${userDamage}</span> damage! 
+            <span class="logBattle__name">${savedEnemy.name}</span>'s health: 
+            <span class="logBattle__currentHealth">${enemyLifeText.textContent}</span>
         </div><div><br></div>`
         );
     } else {
         pageForLogs.insertAdjacentHTML(
             'afterbegin',
-            `<div class="logBattle"><span class="logBattle__name">${currentUser.user}</span>'s strike to <span class="logBattle__zone">${userAttackZone}</span> was blocked! 
-            <span class="logBattle__name">${savedEnemy.name}</span>'s health: <span class="logBattle__currentHealth">${enemyLifeText.textContent}</span>
+            `<div class="logBattle"><span class="logBattle__name">${currentUser.user}</span>'s strike to 
+            <span class="logBattle__zone">${userAttackZone}</span> was blocked! 
+            <span class="logBattle__name">${savedEnemy.name}</span>'s health: 
+            <span class="logBattle__currentHealth">${enemyLifeText.textContent}</span>
         </div><div><br></div>`
         );
     }
@@ -151,9 +168,19 @@ fightButtonStart.addEventListener('click', () => {
 
     // Логика атаки противника
     const currentDefenseZone = [...defenseArea].map(el => el.value);
+    let isEnemyCrit = false;
+
     enemyCurrentAttack.forEach(zone => {
-        if (!currentDefenseZone.includes(zone) || Math.random() < critChance) {
-            enemyDamage += savedEnemy.damage;
+        if (!currentDefenseZone.includes(zone) || Math.random() < ignoreBlockChance) {
+            let hitDamage = savedEnemy.damage;
+
+            // Проверяем крит для удара врага
+            if (Math.random() < critChance) {
+                isEnemyCrit = true;
+                hitDamage *= critMultiplier;
+            }
+
+            enemyDamage += hitDamage;
         }
     });
 
@@ -167,18 +194,24 @@ fightButtonStart.addEventListener('click', () => {
         pageForLogs.insertAdjacentHTML(
             'afterbegin',
             `<div class="logBattle">
-            <span class="logBattle__name">${savedEnemy.name}</span> strikes with <span class="logBattleDamage">${enemyDamage}</span> damage at <span class="logBattle__zone">${enemyCurrentAttack.join(', ')}</span>! 
-            <span class="logBattle__name">${currentUser.user}</span>'s health: <span class="logBattle__currentHealth">${userLifeText.textContent}</span>
+            <span class="logBattle__name">${savedEnemy.name}</span> ${isEnemyCrit ? '<b>CRIT!</b> ' : ''}strikes with 
+            <span class="logBattleDamage">${enemyDamage}</span> damage at 
+            <span class="logBattle__zone">${enemyCurrentAttack.join(', ')}</span>! 
+            <span class="logBattle__name">${currentUser.user}</span>'s health: 
+            <span class="logBattle__currentHealth">${userLifeText.textContent}</span>
         </div>`
         );
     } else {
         pageForLogs.insertAdjacentHTML(
             'afterbegin',
-            `<div class="logBattle"><span class="logBattle__name">${savedEnemy.name}</span>'s attack aimed at <span class="logBattle__zone">${enemyCurrentAttack.join(', ')}</span> was completely deflected! 
-            <span class="logBattle__name">${currentUser.user}</span>'s health: <span class="logBattle__currentHealth">${userLifeText.textContent}</span>
+            `<div class="logBattle"><span class="logBattle__name">${savedEnemy.name}</span>'s attack aimed at 
+            <span class="logBattle__zone">${enemyCurrentAttack.join(', ')}</span> was completely deflected! 
+            <span class="logBattle__name">${currentUser.user}</span>'s health: 
+            <span class="logBattle__currentHealth">${userLifeText.textContent}</span>
         </div>`
         );
     }
+
 
 
     // Завершение боя
