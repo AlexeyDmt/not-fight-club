@@ -16,12 +16,15 @@ saveUserName.addEventListener('submit', (e) => {
     }
 
     const userSetting = {
-        'user': userName,
-        'avatar': './src/assets/avatars/default.jpg',
-        'win': '0',
-        'loses': 'O',
-        'health': 150,
-        'logs': [],
+        user: userName,
+        avatar: './src/assets/avatars/default.jpg',
+        win: 0,
+        loses: 0,
+        health: 150,
+        attack: 1,
+        defense: 2,
+        damage: 15,
+        logs: [],
     }
 
     setUserSetting(userSetting);

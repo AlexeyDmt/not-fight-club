@@ -17,6 +17,12 @@ const popupActive = document.querySelector('.profile__popup');
 
 const allPicture = document.querySelectorAll('.profile__popup img');
 
+const userWin = document.querySelector('.profile__userWin');
+userWin.textContent = currentUser.win;
+
+const userLoses = document.querySelector('.profile__userLoses');
+userLoses.textContent = currentUser.loses;
+
 function changeVisiblePageArea(a, b, c) {
     profilePicture.style.opacity = a;
     profileInfo.style.opacity = a;
